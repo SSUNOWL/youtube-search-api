@@ -283,7 +283,7 @@ const GetVideoDetails = async (videoId) => {
       .videoSecondaryInfoRenderer;
     const res = await {
       id: playerData.videoId,
-      title: firstContent.title.runs[0].text,
+      //title: firstContent.title.runs[0].text,
       thumbnail: playerData.thumbnail,
       isLive: firstContent.viewCount.videoViewCountRenderer.hasOwnProperty(
         "isLive"

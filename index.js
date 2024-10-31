@@ -280,14 +280,14 @@ const GetVideoDetails = async (videoId) => {
     const secondContent = await result.results.results.contents[1]
       .videoSecondaryInfoRenderer;
     const res = await {
-      id: playerData.videoId,
-      thumbnail: playerData.thumbnail,
-      channel:
-        playerData.author ||
-        secondContent.owner.videoOwnerRenderer.title.runs[0].text,
-      channelId: playerData.channelId,
-      description: playerData.shortDescription,
-      keywords: playerData.keywords,
+      // id: playerData.videoId,
+      // thumbnail: playerData.thumbnail,
+      // channel:
+      //   playerData.author ||
+      //   secondContent.owner.videoOwnerRenderer.title.runs[0].text,
+      // channelId: playerData.channelId,
+      // description: playerData.shortDescription,
+      // keywords: playerData.keywords,
       suggestion: result.secondaryResults.secondaryResults.results
         .filter((y) => y.hasOwnProperty("compactVideoRenderer"))
         .map((x) => compactVideoRenderer(x))

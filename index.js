@@ -285,11 +285,11 @@ const GetVideoDetails = async (videoId) => {
       id: playerData.videoId,
       //title: firstContent.title.runs[0].text,
       thumbnail: playerData.thumbnail,
-      isLive: firstContent.viewCount.videoViewCountRenderer.hasOwnProperty(
-        "isLive"
-      )
-        ? firstContent.viewCount.videoViewCountRenderer.isLive
-        : false,
+      // isLive: firstContent.viewCount.videoViewCountRenderer.hasOwnProperty(
+      //   "isLive"
+      // )
+      //   ? firstContent.viewCount.videoViewCountRenderer.isLive
+      //   : false,
       channel:
         playerData.author ||
         secondContent.owner.videoOwnerRenderer.title.runs[0].text,

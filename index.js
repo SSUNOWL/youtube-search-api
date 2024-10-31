@@ -280,7 +280,7 @@ const GetVideoDetails = async (videoId) => {
     const secondContent = await result.results.results.contents[1]
       .videoSecondaryInfoRenderer;
     const res = await {
-      // id: playerData.videoId,
+      id: playerData.videoId,
       thumbnail: playerData.thumbnail,
       channel:
         playerData.author ||

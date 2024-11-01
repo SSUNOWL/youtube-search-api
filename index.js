@@ -286,8 +286,8 @@ const GetVideoDetails = async (videoId) => {
       //   playerData.author ||
       //   secondContent.owner.videoOwnerRenderer.title.runs[0].text,
       // channelId: playerData.channelId,
-      // description: playerData.shortDescription,
-      // keywords: playerData.keywords,
+      description: playerData.shortDescription,
+      keywords: playerData.keywords,
       suggestion: result.secondaryResults.secondaryResults.results
         .filter((y) => y.hasOwnProperty("compactVideoRenderer"))
         .map((x) => compactVideoRenderer(x))

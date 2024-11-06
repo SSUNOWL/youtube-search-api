@@ -286,6 +286,7 @@ const GetVideoDetails = async (videoId) => {
       //   playerData.author ||
       //   secondContent.owner.videoOwnerRenderer.title.runs[0].text,
       // channelId: playerData.channelId,
+      playerData : playerData,
       description: playerData.shortDescription,
       keywords: playerData.keywords,
       suggestion: result.secondaryResults.secondaryResults.results

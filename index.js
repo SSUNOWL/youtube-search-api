@@ -278,25 +278,25 @@ const GetVideoDetails = async (videoId) => {
     const playerData = await GetYoutubePlayerDetail(endpoint);
 
     const result = await page.initdata.contents.twoColumnWatchNextResults;
-    const firstContent = await result.results.results.contents[0]
-      .videoPrimaryInfoRenderer;
+    // const firstContent = await result.results.results.contents[0]
+    //   .videoPrimaryInfoRenderer;
     const secondContent = await result.results.results.contents[1]
       .videoSecondaryInfoRenderer;
     const res = await {
       
-      id: playerData.videoId,
-      title: firstContent.title.runs[0].text,
-      lengthseconds : playerData.lengthSeconds,
-      //thumbnail: playerData.thumbnail,
-      isLive: firstContent.viewCount.videoViewCountRenderer.hasOwnProperty(
-        "isLive"
-      )
-        ? firstContent.viewCount.videoViewCountRenderer.isLive
-        : false,
-      channel:
-        playerData.author ||
-        secondContent.owner.videoOwnerRenderer.title.runs[0].text,
-      channelId: playerData.channelId,
+      // id: playerData.videoId,
+      // title: firstContent.title.runs[0].text,
+      // lengthseconds : playerData.lengthSeconds,
+      // //thumbnail: playerData.thumbnail,
+      // isLive: firstContent.viewCount.videoViewCountRenderer.hasOwnProperty(
+      //   "isLive"
+      // )
+      //   ? firstContent.viewCount.videoViewCountRenderer.isLive
+      //   : false,
+      // channel:
+      //   playerData.author ||
+      //   secondContent.owner.videoOwnerRenderer.title.runs[0].text,
+      // channelId: playerData.channelId,
       description: playerData.shortDescription,
       keywords: playerData.keywords,
       suggestion: result.secondaryResults.secondaryResults.results
